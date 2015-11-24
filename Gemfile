@@ -12,23 +12,19 @@ gem 'ckeditor'
 gem 'will_paginate'#, '~> 3.0.6'
 gem 'pundit'
 
-
-group :development, :test do
-  gem 'byebug'
-end
-group :development do
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
-end
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'high_voltage'
 gem 'mysql2', '~> 0.3.18'
-gem 'sqlite3'
+gem 'pg'
 gem 'puma'
 gem 'simple_form'
 
-group :development do
+group :development, :test do
+  gem 'byebug'
+  gem 'sqlite3'
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
   gem 'foreman'
   gem 'guard-bundler'
   gem 'guard-rails'
@@ -39,15 +35,18 @@ group :development do
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
   gem 'spring-commands-rspec'
-end
-group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
 end
+
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'launchy'
   gem 'selenium-webdriver'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
