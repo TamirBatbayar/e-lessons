@@ -6366,3 +6366,17 @@ Processing by VisitorsController#index as HTML
   Rendered layouts/_navigation.html.erb (5.2ms)
   Rendered layouts/_messages.html.erb (0.2ms)
 Completed 200 OK in 119ms (Views: 118.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-24 18:19:43 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  [1m[35mSlide Load (0.4ms)[0m  SELECT "slides".* FROM "slides"
+  Rendered visitors/_jumbotron.html.erb (1.1ms)
+  Rendered visitors/index.html.erb within layouts/application (22.7ms)
+  [1m[36mPageContent Load (0.4ms)[0m  [1mSELECT "page_contents".* FROM "page_contents"[0m
+  Rendered layouts/_navigation_links.html.erb (16.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (11.0ms)
+  Rendered layouts/_navigation.html.erb (31.5ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+Completed 200 OK in 565ms (Views: 562.8ms | ActiveRecord: 1.8ms)
