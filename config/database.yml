@@ -1,44 +1,44 @@
 #  ================= SQLite ========================================
 
-# default: &default
-#   adapter: sqlite3
-#   pool: 5
-#   timeout: 5000
-
-# development:
-#   <<: *default
-#   database: db/development.sqlite3
-
-# test:
-#   <<: *default
-#   database: db/test.sqlite3
-
-# production:
-#   <<: *default
-#   database: db/production.sqlite3
-
-
-# ================== PostgreSQL ====================================
 default: &default
-  adapter: postgresql
-  encoding: unicode
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  adapter: sqlite3
   pool: 5
+  timeout: 5000
 
 development:
   <<: *default
-  database: nzt_development
+  database: db/development.sqlite3
 
 test:
   <<: *default
-  database: nzt_test
+  database: db/test.sqlite3
 
 production:
   <<: *default
-  database: nzt_production
-  username: nzt
-  password: <%= ENV['NZT_DATABASE_PASSWORD'] %>
+  database: db/production.sqlite3
+
+
+# ================== PostgreSQL ====================================
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   # For details on connection pooling, see rails configuration guide
+#   # http://guides.rubyonrails.org/configuring.html#database-pooling
+#   pool: 5
+
+# development:
+#   <<: *default
+#   database: nzt_development
+
+# test:
+#   <<: *default
+#   database: nzt_test
+
+# production:
+#   <<: *default
+#   database: nzt_production
+#   username: nzt
+#   password: <%= ENV['NZT_DATABASE_PASSWORD'] %>
 # # ======================= MYSQL ======================================
 
 # development:

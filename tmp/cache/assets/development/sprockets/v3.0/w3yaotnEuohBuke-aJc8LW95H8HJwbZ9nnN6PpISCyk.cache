@@ -1,0 +1,9 @@
+I"d(function() {
+  (function() {
+    return getip(json);
+  });
+
+  alert(json.ip);
+
+}).call(this);
+:ET

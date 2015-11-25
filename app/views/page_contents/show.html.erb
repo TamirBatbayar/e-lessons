@@ -13,7 +13,8 @@
 					<%= link_to 'Back', page_contents_path, :class => "btn btn-lg btn-default" %>
 				<% end %>
 			<% end %>
-
+			<p>Your IP address is <%= @client_ip %></p>
+			<p>Your MAC address is <%= @mac_address %> </p>
 			<h3>
 			  <%= @page_content.name %>
 			</h3>

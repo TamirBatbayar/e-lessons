@@ -10,6 +10,9 @@ class PageContentsController < ApplicationController
   # GET /page_contents/1
   # GET /page_contents/1.json
   def show
+    #request.ip.to_yaml
+    @client_ip = request.ip
+    @mac_address = get_mac_address(@client_ip)
   end
 
   # GET /page_contents/new
@@ -71,4 +74,19 @@ class PageContentsController < ApplicationController
     def page_content_params
       params.require(:page_content).permit(:name, :content)
     end
+
+  def get_mac_address(ip_address)
+    `ping -c 1 #{request.ip}`
+    sleep(3) # For dramatic effect
+    arptable = `arp -a`
+    entries = arptable.split("\n")
+    # ipmap = {}
+    # entries.each do |e|
+    #   ent = e.split(" ")
+    #   ipmap["#{ent[1].gsub(/\(|\)/, "")}"] = ent[3]
+    # end
+    # puts imap["#{request.ip}"]
+
+    return entries
+  end
 end
