@@ -16,7 +16,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'high_voltage'
 gem 'mysql2', '~> 0.3.18'
-gem 'pg'
+#gem 'pg'
 gem 'puma'
 gem 'simple_form'
 
