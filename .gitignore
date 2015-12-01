@@ -54,6 +54,7 @@ pickle-email-*.html
 
 # Minii nemsen ignore file-uud
 /log/*
+/tmp/*
 
 
 
