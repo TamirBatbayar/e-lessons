@@ -19,6 +19,7 @@ gem 'mysql2', '~> 0.3.18'
 #gem 'pg'
 gem 'puma'
 gem 'simple_form'
+gem 'stripe'
 
 group :development, :test do
   gem 'byebug'
