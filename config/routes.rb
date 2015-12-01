@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-
-  resources :lessons
   resources :lessons
   resources :slides
   mount Ckeditor::Engine => '/ckeditor'
@@ -8,5 +6,5 @@ Rails.application.routes.draw do
   root to: 'visitors#index'
   devise_for :users
   resources :users
-
+   get 'visitors/subscribe' => 'visitors#subscribe', :as => 'subscribe'
 end
